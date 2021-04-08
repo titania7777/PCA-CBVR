@@ -1,2 +1,2 @@
-# PCA-CBVR
-Prototypical Category Approximation Content-Based Video Retrieval
+# The original repository of PCA-CBVR
+This Repository will be updated soon.
