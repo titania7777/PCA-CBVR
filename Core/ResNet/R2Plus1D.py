@@ -131,21 +131,21 @@ class ResNet(nn.Module):
         )
     
     def _downsample(self, x, planes, stride):
-        out = F.avg_pool3d(x, kernel_size=1, strid=stride)
+        out = F.avg_pool3d(x, kernel_size=1, stride=stride)
         zero_pads = torch.zeros(out.size(0), planes - out.size(1), out.size(2), out.size(3), out.size(4))
         
-        if out.is_cuda():
+        if out.is_cuda:
             zero_pads = zero_pads.cuda(out.get_device())
         
         out = torch.cat([out, zero_pads], dim=1)
 
         return out
 
-    def _make_layer(self, block, planes, blocks, stride=1):
+    def _make_layer(self, block, planes, num_blocks, stride=1):
         downsample = None
         if stride != 1 or self.inplanes != planes * block.expansion:
             if self.shortcut == "A":
-                downsample = partial(self._downsample, planes=planes * block.exansion, stride=stride)
+                downsample = partial(self._downsample, planes=planes * block.expansion, stride=stride)
             if self.shortcut == "B":
                 downsample = nn.Sequential(conv1x1x1(self.inplanes, planes * block.expansion, stride), nn.BatchNorm3d(planes * block.expansion))
 
@@ -153,7 +153,7 @@ class ResNet(nn.Module):
         layers.append(block(inplanes=self.inplanes, planes=planes, stride=stride, downsample=downsample))
         
         self.inplanes = planes * block.expansion
-        [layers.append(block(self.inplanes, planes)) for _ in range(1, blocks)]
+        [layers.append(block(self.inplanes, planes)) for _ in range(1, num_blocks)]
 
         return nn.Sequential(*layers)
 
