@@ -78,11 +78,12 @@ python finetuning.py --args(Default) [choices]
 If you use this code in your work, please cite our work
 ```bibtex
 @ARTICLE{PCA-CVBR2022,
-  author={Hyeok Yoon and Ji-Hyeong Han},
-  journal={IEEE Access}, 
-  title={Content-Based Video Retrieval With Prototypes of Deep Features}, 
-  year={2022},
-  volume={10},
-  pages={30730-30742},
-  doi={10.1109/ACCESS.2022.3160214}}
+    author={Hyeok Yoon and Ji-Hyeong Han},
+    journal={IEEE Access}, 
+    title={Content-Based Video Retrieval With Prototypes of Deep Features}, 
+    year={2022},
+    volume={10},
+    pages={30730-30742},
+    doi={10.1109/ACCESS.2022.3160214},
+}
 ```
