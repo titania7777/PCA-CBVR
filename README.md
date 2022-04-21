@@ -1,5 +1,5 @@
 # The original repository of PCA-CBVR
-The paper is still under review. And we will update the example code soon.
+We will update the example code soon.
 
 The PCA-CBVR (Prototypical Category Approximation Content-Based Video Retrieval) is a proposed method among CBVR applications.
 
@@ -73,3 +73,17 @@ python finetuning.py --args(Default) [choices]
 31. --only_cpu(store_true): performing all process on the cpu
 
 ☆ (tune_way, tune_shot) options are depends on (tune_type) option
+
+## Citation
+If you use this code in your work, please cite our work
+```bibtex
+@ARTICLE{9737137,
+  author={Yoon, Hyeok and Han, Ji-Hyeong},
+  journal={IEEE Access}, 
+  title={Content-Based Video Retrieval With Prototypes of Deep Features}, 
+  year={2022},
+  volume={10},
+  number={},
+  pages={30730-30742},
+  doi={10.1109/ACCESS.2022.3160214}}
+```
