@@ -1,6 +1,4 @@
 # The original repository of PCA-CBVR
-We will update the example code soon.
-
 The PCA-CBVR (Prototypical Category Approximation Content-Based Video Retrieval) is a proposed method among CBVR applications.
 
 The PCA-CBVR process consists of two-step. The first step is query video classification, in this step we utilize [prototype technique](https://arxiv.org/abs/1703.05175). The second step is a fine-search on the database videos which corresponds to the estimated query video category.
