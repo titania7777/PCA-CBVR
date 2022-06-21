@@ -1,6 +1,5 @@
 import os
 import sys
-import time
 import shutil
 from typing import OrderedDict
 from termcolor import cprint, colored
